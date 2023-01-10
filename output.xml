@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.10 on linux)" generated="20230110 22:59:38.508" rpa="false" schemaversion="3">
+<suite id="s1" name="Empty Input Fields" source="/home/sergei/Рабочий стол/my_project/final_testing/TestCases/empty_input_fields.robot">
+<kw name="Open my brauser" library="Invalid_login_information" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${brausers}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230110 22:59:38.613" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230110 22:59:38.612" endtime="20230110 22:59:46.740"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230110 22:59:46.740" endtime="20230110 22:59:46.843"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:38.612" endtime="20230110 22:59:46.844"/>
+</kw>
+<test id="s1-t1" name="enter an empty login" line="13">
+<kw name="Checking for an empty username input field">
+<arg>${EMPTY}</arg>
+<arg>secret_sauce</arg>
+<kw name="Enter UserName" library="Invalid_login_information">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230110 22:59:46.846" level="INFO">Typing text '' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20230110 22:59:46.845" endtime="20230110 22:59:46.913"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:46.845" endtime="20230110 22:59:46.913"/>
+</kw>
+<kw name="Enter Password" library="Invalid_login_information">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230110 22:59:46.913" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230110 22:59:46.913" endtime="20230110 22:59:47.001"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:46.913" endtime="20230110 22:59:47.001"/>
+</kw>
+<kw name="Clic Login" library="Invalid_login_information">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${clic_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230110 22:59:47.002" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20230110 22:59:47.001" endtime="20230110 22:59:47.050"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:47.001" endtime="20230110 22:59:47.050"/>
+</kw>
+<kw name="empty field username" library="Invalid_login_information">
+<arg>${empty field username}</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Errors}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230110 22:59:47.062" level="INFO">Current page contains text 'Epic sadface: Username is required'.</msg>
+<status status="PASS" starttime="20230110 22:59:47.050" endtime="20230110 22:59:47.063"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:47.050" endtime="20230110 22:59:47.063"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:46.844" endtime="20230110 22:59:47.063"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:46.844" endtime="20230110 22:59:47.063"/>
+</test>
+<test id="s1-t2" name="enter an empty password" line="14">
+<kw name="Checking for an empty username input field">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Enter UserName" library="Invalid_login_information">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230110 22:59:47.065" level="INFO">Typing text '' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20230110 22:59:47.065" endtime="20230110 22:59:47.107"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:47.064" endtime="20230110 22:59:47.107"/>
+</kw>
+<kw name="Enter Password" library="Invalid_login_information">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230110 22:59:47.107" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230110 22:59:47.107" endtime="20230110 22:59:47.158"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:47.107" endtime="20230110 22:59:47.158"/>
+</kw>
+<kw name="Clic Login" library="Invalid_login_information">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${clic_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230110 22:59:47.159" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20230110 22:59:47.158" endtime="20230110 22:59:47.185"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:47.158" endtime="20230110 22:59:47.185"/>
+</kw>
+<kw name="empty field username" library="Invalid_login_information">
+<arg>${empty field username}</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Errors}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230110 22:59:47.193" level="INFO">Current page contains text 'Epic sadface: Username is required'.</msg>
+<status status="PASS" starttime="20230110 22:59:47.185" endtime="20230110 22:59:47.193"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:47.185" endtime="20230110 22:59:47.193"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:47.063" endtime="20230110 22:59:47.193"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:47.063" endtime="20230110 22:59:47.193"/>
+</test>
+<kw name="Close my brwosers" library="Invalid_login_information" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230110 22:59:47.194" endtime="20230110 22:59:47.251"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:47.194" endtime="20230110 22:59:47.251"/>
+</kw>
+<status status="PASS" starttime="20230110 22:59:38.509" endtime="20230110 22:59:47.251"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Empty Input Fields">Empty Input Fields</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
